@@ -1,26 +1,27 @@
-# Quotes
-Kotlin quotes app
+# Kotlin Quotes
+Exemplo de aṕlicação REST escrita em kotlin utlizando Spring-Boot
 
-## Idéia Inicial 
-Usuário escolhe o quanto ruim esta seu "humor" : 
+Nada mais é que um "wrapper" em uma API aberta de citações [fraze.it](http://fraze.it/api.jsp)
 
-> "Odeio me chefe" 
+## Usando
+1. Após clone, compile via maven
+    
+    `$ mvn clean package`
 
-> "Minha vida tá uma merda" 
+2. Execute a aplicação
 
-> "Depressão pós-férias" 
+    `java -jar target/kotlin-quotes-0.0.1.jar`
 
-Esta App mapeia para uma das categorais que a API que usamos disponibiliza (ver abaixo) e mostra a frase que vai mudar a vida do sujeito (ou não).
+3. Teste se aplicação esta up 
+
+   [http://localhost:8080/hello](http://localhost:8080/hello)
+   
+4. Para ver serviço de citações funcionando
+
+   `http://localhost:8080/quote/[categoria]/[termo]`
+
+   [http://localhost:8080/quote/art/rock](http://localhost:8080/quote/art/rock)
 
 
-## Source API 
-
-https://theysaidso.com/api/
-
-### Basic
-
-curl -v  -i -X GET http://quotes.rest/qod/categories.json
-
-curl -v  -i -X GET http://quotes.rest/qod.json?category=management
 
 
