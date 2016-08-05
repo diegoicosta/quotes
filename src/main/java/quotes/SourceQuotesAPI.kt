@@ -25,9 +25,10 @@ class QuotesApi {
         quotes = Feign.builder()
                 .decoder(GsonDecoder())
                 .target(SourceQuotesAPI::class.java, "http://fraze.it/api/famous")
+
     }
 
-    fun quote(category: String, term: String): Result {
+    fun quote(category: String , term: String): Result {
         return quotes.quotes(term, category)
     }
 
